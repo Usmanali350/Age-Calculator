@@ -1,0 +1,42 @@
+
+
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqVxkEXL4LjHVsXh7YZKlVPZCaA8JrVWuICRHgv7WG2SS-H8NwURJvT8&s"); /* Add your full base64 string here */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;}
+/* App.css */
+
+/* Styling for nav links */
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+/* Gradient underline on hover */
+.navbar-nav .nav-item .nav-link:hover {
+  color: white; /* Keep the text color */
+}
+
+.navbar-nav .nav-item .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Thickness of the underline */
+  bottom: -5px; /* Position the underline below the text */
+  left: 0;
+  background-image: linear-gradient(to right, #FFD700, #FF6347); /* Gold to tomato gradient */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth animation */
+}
+
+/* Apply the animation when hovered */
+.navbar-nav .nav-item .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
